@@ -1,0 +1,407 @@
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+    --primary-color: #0a0a11;
+    --secondary-color: #a29bfe;
+    --accent-color: #fdcb6e;
+    --white: #ffffff;
+    --bg-soft: #f9f8ff;
+}
+body { font-family: 'Poppins', sans-serif; background: var(--bg-soft); overflow-x: hidden; }
+.hidden { display: none !important; }
+
+/* NAVBAR & DASHBOARD */
+.navbar { display: flex; justify-content: space-between; padding: 15px 5%; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+.logo-container { display: flex; align-items: center; gap: 10px; }
+.logo-text { font-weight: 700; color: var(--primary-color); font-size: 1.4rem; }
+.site-logo { height: 35px; }
+.login-btn { padding: 8px 22px; border-radius: 20px; border: 2px solid var(--primary-color); cursor: pointer; background: transparent; color: var(--primary-color); font-weight: 600; }
+
+/* REGISTRATION (Fixed Card Layout) */
+.reg-container { display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+.registration-box { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); width: 400px; }
+.reg-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 25px; }
+.reg-title { font-size: 2.2rem; font-weight: 700; }
+.form-row { margin-bottom: 18px; }
+.form-row label { display: block; margin-bottom: 5px; font-weight: 500; }
+.form-row input { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px; }
+.login-submit-btn { width: 100%; padding: 12px; background: #f0f0f0; border: 1px solid #767676; cursor: pointer; font-weight: 600; margin-top: 10px; }
+
+/* MAP PAGE LAYOUT (Sidebar Fix) */
+.map-layout { display: flex; height: 100vh; overflow: hidden; }
+.map-sidebar { width: 330px; background: white; padding: 25px; display: flex; flex-direction: column; border-right: 1px solid #ddd; z-index: 1000; }
+.map-logo-left { display: flex; align-items: center; gap: 10px; margin-bottom: 35px; }
+.map-control-box { background: #f9faff; padding: 20px; border-radius: 12px; border: 1px solid #eee; display: flex; flex-direction: column; gap: 12px; }
+.map-control-box button { width: 100%; padding: 12px; border: 1px solid #ddd; background: white; border-radius: 8px; cursor: pointer; text-align: left; font-weight: 500; display: flex; align-items: center; gap: 8px; }
+.search-btn { background: #e3f2fd !important; border-color: #90caf9 !important; }
+.rakha-box { margin-top: 10px; padding: 15px; background: var(--accent-color); border-radius: 8px; text-align: center; font-weight: 700; font-style: italic; }
+.logout-map-btn { margin-top: auto; padding: 10px; background: transparent; border: 1px solid #ff7675; color: #ff7675; border-radius: 5px; cursor: pointer; }
+
+/* MAP AREA */
+.map-view-container { flex: 1; display: flex; flex-direction: column; }
+.map-header-bar { padding: 15px 25px; background: white; border-bottom: 1px solid #eee; }
+#map { flex: 1; width: 100%; }
+
+:root {
+    --primary-color: #6c5ce7;
+    --secondary-color: #a29bfe;
+    --accent-color: #fdcb6e;
+    --text-main: #2d3436;
+    --text-light: #636e72;
+    --white: #ffffff;
+    --bg-soft: #7a68e2;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-soft);
+    color: var(--text-main);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+.hidden { display: none !important; }
+
+/* --- NAVIGATION --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: var(--white);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    width: 100%;
+}
+
+.logo-container { display: flex; align-items: center; gap: 10px; }
+.logo-text { font-size: 1.6rem; font-weight: 700; color: var(--primary-color); }
+.site-logo { height: 40px; width: auto; }
+
+.login-btn {
+    padding: 8px 25px;
+    border: 2px solid var(--primary-color);
+    background: transparent;
+    color: var(--primary-color);
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* --- DASHBOARD HERO --- */
+.dashboard-hero { 
+    display: flex; 
+    align-items: center; 
+    padding: 60px 8%; 
+    min-height: 80vh; 
+    gap: 40px; 
+}
+
+.hero-content { flex: 1; }
+.hero-title { font-size: 3rem; line-height: 1.2; margin-bottom: 20px; }
+.accent { color: black; }
+.hero-description { margin-bottom: 30px; color: var(--text-light); }
+
+.blob-bg {
+    width: 400px;
+    height: 400px;
+    background: var(--secondary-color);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    animation: morph 8s infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.women-safety-gfx { width: 80%; border-radius: 20px; }
+
+/* --- REGISTRATION PAGE (Fixed Card Style) --- */
+.registration-header { display: flex; justify-content: flex-end; padding: 20px 5%; width: 100%; }
+.reg-container { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 70vh;
+    padding: 20px; 
+}
+
+.registration-box { 
+    width: 100%; 
+    max-width: 400px; 
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.reg-title { font-size: 2.5rem; font-weight: 700; margin-bottom: 25px; color: var(--text-main); }
+.form-row { margin-bottom: 20px; text-align: left; }
+.form-row label { display: block; margin-bottom: 8px; font-weight: 500; }
+.form-row input { 
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    font-size: 1rem;
+}
+
+.login-submit-btn { 
+    width: 100%;
+    padding: 12px; 
+    background: var(--primary-color); 
+    color: white;
+    border: none; 
+    cursor: pointer; 
+    border-radius: 8px; 
+    font-weight: 600;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.login-submit-btn:hover { background: #5649c1; }
+.back-home { margin-top: 20px; display: block; text-decoration: none; color: var(--text-light); font-size: 0.9rem; cursor: pointer; }
+
+/* --- MAP PAGE UI FIXES (Matches Screenshot requirements) --- */
+.map-layout {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Sidebar on the Left */
+.map-sidebar {
+    width: 350px;
+    background: var(--white);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid rgba(0,0,0,0.08);
+    box-shadow: 4px 0 15px rgba(0,0,0,0.03);
+    z-index: 1000;
+    flex-shrink: 0;
+}
+
+.map-logo-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+/* Control Box for Buttons */
+.map-control-box {
+    background: #fcfcff;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #eef0ff;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.map-control-box button {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid #dce0ff;
+    background: white;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 600;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-main);
+    transition: all 0.2s ease;
+}
+
+.map-control-box button:hover {
+    background: #f0f2ff;
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Specific Search Button Styling */
+.search-btn {
+    background: var(--primary-color) !important;
+    color: white !important;
+    border: none !important;
+}
+
+/* Rakha Quote Section */
+.rakha-box {
+    margin: 10px 0;
+    padding: 15px;
+    background: var(--accent-color);
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 700;
+    font-style: italic;
+    color: #2d3436;
+}
+
+.logout-map-btn {
+    margin-top: auto;
+    padding: 12px;
+    background: transparent;
+    border: 1.5px solid #ff7675;
+    color: #ff7675;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.logout-map-btn:hover {
+    background: #ff7675;
+    color: white;
+}
+
+/* Map View Container */
+.map-view-container {
+    flex-grow: 1;
+    position: relative;
+    background: #f0f0f0;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Heatmap Circle Overlay (image_b81c65.png style) */
+.heatmap-overlay-info {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+}
+
+.heat-card {
+    background: var(--secondary-color);
+    padding: 25px;
+    border-radius: 50%;
+    width: 170px;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    box-shadow: 0 10px 30px rgba(108, 92, 231, 0.3);
+    border: 5px solid white;
+}
+
+.heat-card span { font-weight: 700; font-size: 1rem; line-height: 1.2; margin-bottom: 5px; }
+.heat-card small { font-size: 0.75rem; opacity: 0.9; }
+
+/* --- ANIMATIONS --- */
+@keyframes morph {
+    0%, 100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+    50% { border-radius: 50% 50% 30% 70% / 50% 60% 40% 60%; }
+}
+/* Update this part in your CSS */
+.cta-primary {
+    padding: 15px 35px;
+    background-color: #1c125b; /* Professional purple to match your logo */
+    color: white;
+    border: none;
+    border-radius: 50px; /* Makes it perfectly rounded */
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3);
+    margin-top: 20px;
+}
+
+.cta-primary:hover {
+    background-color: #20185c; /* Darkens slightly when you point at it */
+    transform: translateY(-2px); /* Makes it "pop" up slightly */
+    box-shadow: 0 6px 20px rgba(108, 92, 231, 0.4);
+}
+/* Styling for the Navigation Login Button */
+.login-btn {
+    padding: 10px 30px;
+    border: 2px solid #6c5ce7; /* The primary purple color */
+    background: transparent;
+    color: #6c5ce7;
+    border-radius: 50px; /* This creates the pill shape */
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+/* Hover effect to make it interactive */
+.login-btn:hover {
+    background-color: #6c5ce7;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(108, 92, 231, 0.2);
+}
+
+/* Styling for the Registration/Login Submit Button */
+.login-submit-btn {
+    width: 100%; /* Makes it full width inside the registration box */
+    padding: 12px;
+    background-color: #6c5ce7;
+    color: rgb(25, 25, 111);
+    border: none;
+    border-radius: 8px; /* Slightly less rounded for form buttons */
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-top: 15px;
+    transition: background 0.3s ease;
+}
+
+.login-submit-btn:hover {
+    background-color: #5649c1;
+}
+/* This centers the registration card perfectly */
+.reg-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;     /* Centers vertically */
+    min-height: 100vh;       /* Ensures it uses the full height of the screen */
+    background-color: var(--primary-color); /* The purple background from your image */
+    padding: 20px;
+}
+
+/* Ensure the box itself has a clean white background */
+.registration-box {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;     /* Rounded corners as seen in your screenshot */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;        /* Limits the width so it doesn't stretch too much */
+}/* This centers the registration card perfectly */
+.reg-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;     /* Centers vertically */
+    min-height: 100vh;       /* Ensures it uses the full height of the screen */
+    background-color: var(--primary-color); /* The purple background from your image */
+    padding: 20px;
+}
+
+/* Ensure the box itself has a clean white background */
+.registration-box {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;     /* Rounded corners as seen in your screenshot */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;        /* Limits the width so it doesn't stretch too much */
+}

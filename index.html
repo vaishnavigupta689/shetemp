@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SheRaksha | Women's Safety</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= DASHBOARD ================= -->
+<div id="dashboard-page">
+    <nav class="navbar">
+        <div class="logo-container">
+            <h1 class="logo-text">SheRaksha</h1>
+        </div>
+
+        <!-- CHANGED -->
+        <button class="login-btn" onclick="navigateTo('map-page')">
+            Launch Demo
+        </button>
+    </nav>
+
+    <main class="dashboard-hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Together we guard, together we grow.
+            </h1>
+
+            <h2 class="accent">Her strength is the world’s glow</h2>
+
+            <p class="hero-description">
+                Real-time safe routes based on crowd density and local analysis.
+            </p>
+
+            <!-- CHANGED -->
+            <button class="cta-primary" onclick="navigateTo('map-page')">
+                Try Live Map
+            </button>
+
+            <!-- TRUST SIGNAL -->
+            <p style="font-size:14px; color:gray; margin-top:15px;">
+                This is a student project prototype. No personal data is collected or stored.
+            </p>
+        </div>
+
+        <div class="hero-visual">
+            <div class="blob-bg">
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD..." 
+                     class="women-safety-gfx">
+            </div>
+        </div>
+    </main>
+</div>
+
+
+<!-- ================= MAP PAGE ================= -->
+<div id="map-page" class="hidden">
+    <main class="map-layout">
+
+        <aside class="map-sidebar">
+            <h2>SheRaksha</h2>
+
+            <div class="map-control-box">
+                <button onclick="getUserLocation()">📍 Current Location</button>
+                <button>🏁 Destination</button>
+                <button class="search-btn">🔍 Search Route</button>
+
+                <div class="rakha-box">
+                    <p>"Our Rakha is your Suraksha"</p>
+                </div>
+            </div>
+
+            <button class="logout-map-btn" onclick="navigateTo('dashboard-page')">
+                Back
+            </button>
+        </aside>
+
+        <section class="map-view-container">
+            <div id="map"></div>
+        </section>
+
+    </main>
+</div>
+
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
